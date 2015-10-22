@@ -431,7 +431,6 @@ void as_if(){
 
 	delay_ms(1500);
 
-/*
 
 	//"i"
 
@@ -564,21 +563,11 @@ void as_if(){
 
 	delay_ms(2000);
 
-	*/
-
 }
 
 void duh(){
 	//"d"
-/*
-	//entering cell
-	set_motors(20,20);
-	delay_ms(2000);
-	set_motors(0,-20);
-	delay_ms(1500);
-	set_motors(-20,-20);
-	delay_ms(2000);
-*/
+	//
 	//start 2/3 oval
 	//drop
 	set_motors(0,-30);
@@ -604,8 +593,8 @@ void duh(){
 	//lift
 	lift_pen(0);
 	delay_ms(500);
-	set_motors(-10,-30);
-	delay_ms(2100);
+	set_motors(-16,-34);
+	delay_ms(2700);
 
 	//"u"
 	//drop
@@ -628,8 +617,8 @@ void duh(){
 	delay_ms(500);
 	
 	
-	set_motors(-20,-25);
-	delay_ms(2000);
+	set_motors(-20,-27);
+	delay_ms(1300);
 	//set_motors(-20,-45);
 	//delay_ms(2000);
 	set_motors(-5,-30);
@@ -743,14 +732,19 @@ int main() {
 			} else {
 				if (count == 1){
 					count--;
-					/*if (last ==0){
-						no();
+					if (last ==0){
 						last = 1;
+						no();
 					}else if(last == 1){
-						duh();
+						last = 2;
+						no();
+					}else if(last == 2){
+						last = 3;
+						no();
+					}else if(last == 3){
 						last = 0;
-					}*/
-					no();
+						duh();
+					}
 				}
 				green_led(1);
 				delay_ms(1000);
@@ -761,95 +755,7 @@ int main() {
 		}
 	}
 	
-	
-
-	/*drop_pen(0);
-
-	delay_ms(1000);
-
-	set_motors(-22,-20);
-
-	delay_ms(2000);
-
-	set_motors(23,20);
-
-	delay_ms(1500);
-
-	set_motors(20,-20);
-
-	delay_ms(2050);
-
-	set_motors(30a,20);
-
-	delay_ms(1500);
-
-	lift_pen(0);
-
-	//set_motors(20,45);
-
-	//delay_ms(2000);
-
-	//set_motors(30,30);
-
-	delay_ms(1000);
-
-	*/
-
-	//no();
-	//duh();
-
-
-
-
-
-
-
-	
-
-	/*delay_ms(3000);
-
-	clear();
-
-	print("LIFT");
-
-
-
-
-	lift_pen(0);
-
-	delay_ms(1000);
-
-	*/
-
-
-
-
-
-
-
-
-
-
-	// This part of the code is never reached.  A robot should
-
-	// never reach the end of its program, or unpredictable behavior
-
-	// will result as random code starts getting executed.  If you
-
-	// really want to stop all actions at some point, set your motors
-
-	// to 0,0 and run the following command to loop forever:
-
-	//
-
-	//while(1);
-
 }
-
-
-
-
-
 
 
 // Local Variables: **
